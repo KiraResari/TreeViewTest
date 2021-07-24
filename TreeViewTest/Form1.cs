@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TreeViewTest
 {
-    public partial class Form1 : Form
+    public partial class CharacterDisplayer : Form
     {
-        public Form1()
+        public CharacterDisplayer()
         {
             InitializeComponent();
         }
@@ -25,7 +25,6 @@ namespace TreeViewTest
             {
                 AddNodeForGameCharacter(gameCharacter);
             }
-            childrenTable.DataSource = GenerateSampleDataTable();
         }
 
         private void AddNodeForGameCharacter(GameCharacter gameCharacter)
@@ -65,19 +64,9 @@ namespace TreeViewTest
             }
         }
 
-        private DataTable GenerateSampleDataTable()
+        private void label1_Click(object sender, EventArgs e)
         {
-            DataTable dataTable = new DataTable();
 
-            dataTable.Columns.Add("Name", typeof(string));
-            dataTable.Columns.Add("Species", typeof(string));
-            dataTable.Columns.Add("Weapon", typeof(string));
-
-            dataTable.Rows.Add("Ozymandias", "Wel", "Glaive");
-            dataTable.Rows.Add("Vashya", "Draykin", "Force Rod");
-            dataTable.Rows.Add("Amadeus", "Seraph", "Staff");
-
-            return dataTable;
         }
     }
 }

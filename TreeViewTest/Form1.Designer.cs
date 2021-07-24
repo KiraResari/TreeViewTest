@@ -1,7 +1,7 @@
 ﻿
 namespace TreeViewTest
 {
-    partial class Form1
+    partial class CharacterDisplayer
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -37,6 +37,7 @@ namespace TreeViewTest
             this.speciesLabel = new System.Windows.Forms.Label();
             this.weaponDisplay = new System.Windows.Forms.Label();
             this.childrenTable = new System.Windows.Forms.DataGridView();
+            this.childrenLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.childrenTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,17 +110,31 @@ namespace TreeViewTest
             // 
             // childrenTable
             // 
+            this.childrenTable.AllowUserToAddRows = false;
+            this.childrenTable.AllowUserToDeleteRows = false;
             this.childrenTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.childrenTable.Location = new System.Drawing.Point(238, 288);
+            this.childrenTable.Location = new System.Drawing.Point(267, 96);
             this.childrenTable.Name = "childrenTable";
-            this.childrenTable.Size = new System.Drawing.Size(467, 150);
+            this.childrenTable.Size = new System.Drawing.Size(423, 150);
             this.childrenTable.TabIndex = 7;
             // 
-            // Form1
+            // childrenLabel
+            // 
+            this.childrenLabel.AutoSize = true;
+            this.childrenLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.childrenLabel.Location = new System.Drawing.Point(264, 80);
+            this.childrenLabel.Name = "childrenLabel";
+            this.childrenLabel.Size = new System.Drawing.Size(57, 13);
+            this.childrenLabel.TabIndex = 8;
+            this.childrenLabel.Text = "Children:";
+            this.childrenLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // CharacterDisplayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.childrenLabel);
             this.Controls.Add(this.childrenTable);
             this.Controls.Add(this.weaponDisplay);
             this.Controls.Add(this.speciesDisplay);
@@ -128,8 +143,8 @@ namespace TreeViewTest
             this.Controls.Add(this.characterNameLabel);
             this.Controls.Add(this.characterNameDisplay);
             this.Controls.Add(this.treeView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "CharacterDisplayer";
+            this.Text = "Character Displayer";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.childrenTable)).EndInit();
             this.ResumeLayout(false);
@@ -147,6 +162,7 @@ namespace TreeViewTest
         private System.Windows.Forms.Label speciesLabel;
         private System.Windows.Forms.Label weaponDisplay;
         private System.Windows.Forms.DataGridView childrenTable;
+        private System.Windows.Forms.Label childrenLabel;
     }
 }
 

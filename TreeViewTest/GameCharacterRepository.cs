@@ -16,16 +16,37 @@ namespace TreeViewTest
             = new List<GameCharacter>() { sylvia, bokay };
         private static readonly GameCharacter claudia
             = new GameCharacter("Claudia", "Nefilim", "Axe", claudiasChildren);
+        private static readonly List<GameCharacter> ameliasChildren
+            = new List<GameCharacter>() { claudia };
+        private static readonly GameCharacter amelia
+            = new GameCharacter("Amelia", "Nefilim", "None", ameliasChildren);
         private static readonly GameCharacter jioan
             = new GameCharacter("Jioan", "Celinne", "Fists");
         private static readonly GameCharacter idra
             = new GameCharacter("Idra", "Dragon", "Claws");
+        private static readonly GameCharacter michael
+            = new GameCharacter("Michael", "Seraph", "Iserial Projectors");
+        private static readonly GameCharacter gabriel
+            = new GameCharacter("Gabriel", "Seraph", "Greatsword");
+        private static readonly GameCharacter uriel
+            = new GameCharacter("Uriel", "Seraph", "Knuckles");
+        private static readonly GameCharacter raphael
+            = new GameCharacter("Raphael", "Seraph", "Lance");
+        private static readonly GameCharacter amadeus
+            = new GameCharacter("Amadeus", "Seraph", "Staff");
+        private static readonly GameCharacter bianca
+            = new GameCharacter("Bianca", "Sprite", "Orb");
+        private static readonly List<GameCharacter> novasChildren
+            = new List<GameCharacter>() { michael, raphael, uriel, gabriel, amadeus, bianca };
+        private static readonly GameCharacter nova
+            = new GameCharacter("Nova", "Goddess", "Scythe", novasChildren);
 
         public static readonly List<GameCharacter> sampleGameCharacters = new List<GameCharacter>()
         {
-            claudia,
+            amelia,
             jioan,
-            idra
+            idra,
+            nova
         };
 
         public static GameCharacter GetCharacterByName(string characterName)
