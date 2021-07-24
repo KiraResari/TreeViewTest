@@ -36,8 +36,8 @@ namespace TreeViewTest
             this.weaponLabel = new System.Windows.Forms.Label();
             this.speciesLabel = new System.Windows.Forms.Label();
             this.weaponDisplay = new System.Windows.Forms.Label();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.childrenTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.childrenTable)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView1
@@ -107,20 +107,20 @@ namespace TreeViewTest
             this.weaponDisplay.TabIndex = 6;
             this.weaponDisplay.Text = "[Species Display]";
             // 
-            // dataGridView
+            // childrenTable
             // 
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(238, 288);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView.TabIndex = 7;
+            this.childrenTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.childrenTable.Location = new System.Drawing.Point(238, 288);
+            this.childrenTable.Name = "childrenTable";
+            this.childrenTable.Size = new System.Drawing.Size(467, 150);
+            this.childrenTable.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView);
+            this.Controls.Add(this.childrenTable);
             this.Controls.Add(this.weaponDisplay);
             this.Controls.Add(this.speciesDisplay);
             this.Controls.Add(this.weaponLabel);
@@ -131,7 +131,7 @@ namespace TreeViewTest
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.childrenTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +146,7 @@ namespace TreeViewTest
         private System.Windows.Forms.Label weaponLabel;
         private System.Windows.Forms.Label speciesLabel;
         private System.Windows.Forms.Label weaponDisplay;
-        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.DataGridView childrenTable;
     }
 }
 

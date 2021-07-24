@@ -28,19 +28,7 @@ namespace TreeViewTest
             idra
         };
 
-        public static string GetSpeciesByCharacterName(string characterName)
-        {
-            GameCharacter gameCharacter = GetCharacterByName(characterName);
-            return gameCharacter.Species;
-        }
-
-        internal static string GetWeaponByCharacterName(string characterName)
-        {
-            GameCharacter gameCharacter = GetCharacterByName(characterName);
-            return gameCharacter.Weapon;
-        }
-
-        private static GameCharacter GetCharacterByName(string characterName)
+        public static GameCharacter GetCharacterByName(string characterName)
         {
             List<GameCharacter> flattenedGameCharacterList = GetFlattenedGameCharacterList();
             foreach(GameCharacter gameCharacter in flattenedGameCharacterList)

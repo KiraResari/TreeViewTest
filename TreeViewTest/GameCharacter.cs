@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,6 +71,22 @@ namespace TreeViewTest
                 flattenedChildrenList.AddRange(gameCharacter.GetFlattenedChildrenList());
             }
             return flattenedChildrenList;
+        }
+
+        internal DataTable GetChildrenTable()
+        {
+            DataTable dataTable = new DataTable();
+
+            dataTable.Columns.Add("Name", typeof(string));
+            dataTable.Columns.Add("Species", typeof(string));
+            dataTable.Columns.Add("Weapon", typeof(string));
+
+            foreach(GameCharacter child in Children)
+            {
+                dataTable.Rows.Add(child.Name, child.Species, child.Weapon);
+            }
+
+            return dataTable;
         }
     }
 }

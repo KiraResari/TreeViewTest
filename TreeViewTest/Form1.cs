@@ -25,7 +25,7 @@ namespace TreeViewTest
             {
                 AddNodeForGameCharacter(gameCharacter);
             }
-            dataGridView.DataSource = GenerateSampleDataTable();
+            childrenTable.DataSource = GenerateSampleDataTable();
         }
 
         private void AddNodeForGameCharacter(GameCharacter gameCharacter)
@@ -46,10 +46,23 @@ namespace TreeViewTest
             TreeNode selectedNode = treeView1.SelectedNode;
             string characterName = selectedNode.Text;
             this.characterNameDisplay.Text = characterName;
-            this.speciesDisplay.Text
-                = GameCharacterRepository.GetSpeciesByCharacterName(characterName);
-            this.weaponDisplay.Text
-                = GameCharacterRepository.GetWeaponByCharacterName(characterName);
+            GameCharacter selectedCharacter
+                = GameCharacterRepository.GetCharacterByName(characterName);
+            this.speciesDisplay.Text = selectedCharacter.Species;
+            this.weaponDisplay.Text = selectedCharacter.Weapon;
+            DisplayChildrenInTableView(selectedCharacter);
+        }
+
+        private void DisplayChildrenInTableView(GameCharacter selectedCharacter)
+        {
+            if (selectedCharacter.HasChildren())
+            {
+                childrenTable.DataSource = selectedCharacter.GetChildrenTable();
+            }
+            else
+            {
+                childrenTable.DataSource = null;
+            }
         }
 
         private DataTable GenerateSampleDataTable()
