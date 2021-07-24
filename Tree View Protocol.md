@@ -20,4 +20,8 @@
     * https://www.dotnetperls.com/treeview
       * **SUCCESS**: Using this tutorial I now managed to create my first, tentative working TreeView, and I am already getting ideas for how I can use this for the project
   * I am now spending some time experimenting with the tree view to get a good feeling for how it works and how I can populate it with data from a source
+  * I have now gotten to a point where I feel reasonably comfortable in dealing with the Tree View
+* I figure it makes sense to use this as a base to try and add the table view too
+  * Let's see if I can find a good tutorial on this here
+  *  
 

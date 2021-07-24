@@ -25,6 +25,7 @@ namespace TreeViewTest
             {
                 AddNodeForGameCharacter(gameCharacter);
             }
+            dataGridView.DataSource = GenerateSampleDataTable();
         }
 
         private void AddNodeForGameCharacter(GameCharacter gameCharacter)
@@ -49,6 +50,21 @@ namespace TreeViewTest
                 = GameCharacterRepository.GetSpeciesByCharacterName(characterName);
             this.weaponDisplay.Text
                 = GameCharacterRepository.GetWeaponByCharacterName(characterName);
+        }
+
+        private DataTable GenerateSampleDataTable()
+        {
+            DataTable dataTable = new DataTable();
+
+            dataTable.Columns.Add("Name", typeof(string));
+            dataTable.Columns.Add("Species", typeof(string));
+            dataTable.Columns.Add("Weapon", typeof(string));
+
+            dataTable.Rows.Add("Ozymandias", "Wel", "Glaive");
+            dataTable.Rows.Add("Vashya", "Draykin", "Force Rod");
+            dataTable.Rows.Add("Amadeus", "Seraph", "Staff");
+
+            return dataTable;
         }
     }
 }
