@@ -27,4 +27,5 @@
     * https://www.dotnetperls.com/datatable
       * **SUCCESS:** Using this tutorial I now managed to add a Table View, and already have a relatively good idea of how to populate it using the children data
   * Experimenting with this, I now managed to create logic that displays the children of whatever character is selected in the data table
+* This is as far as I'm getting with this today
 
