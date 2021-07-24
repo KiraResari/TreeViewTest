@@ -20,7 +20,7 @@ namespace TreeViewTest
         private void Form1_Load(object sender, EventArgs e)
         {
             foreach(
-                GameCharacter gameCharacter in SampleGameCharacters.sampleGameCharacters
+                GameCharacter gameCharacter in GameCharacterRepository.sampleGameCharacters
             )
             {
                 AddNodeForGameCharacter(gameCharacter);
@@ -40,10 +40,15 @@ namespace TreeViewTest
             MessageBox.Show(string.Format("You selected: {0}", node.Text));
         }
 
-        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        private void TreeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             TreeNode selectedNode = treeView1.SelectedNode;
-            this.label1.Text = selectedNode.Text;
+            string characterName = selectedNode.Text;
+            this.characterNameDisplay.Text = characterName;
+            this.speciesDisplay.Text
+                = GameCharacterRepository.GetSpeciesByCharacterName(characterName);
+            this.weaponDisplay.Text
+                = GameCharacterRepository.GetWeaponByCharacterName(characterName);
         }
     }
 }

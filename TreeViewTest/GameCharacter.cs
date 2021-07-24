@@ -60,5 +60,16 @@ namespace TreeViewTest
             }
             return childrenNodeList.ToArray();
         }
+
+        internal List<GameCharacter> GetFlattenedChildrenList()
+        {
+            List<GameCharacter> flattenedChildrenList = new List<GameCharacter>();
+            foreach(GameCharacter gameCharacter in Children)
+            {
+                flattenedChildrenList.Add(gameCharacter);
+                flattenedChildrenList.AddRange(gameCharacter.GetFlattenedChildrenList());
+            }
+            return flattenedChildrenList;
+        }
     }
 }

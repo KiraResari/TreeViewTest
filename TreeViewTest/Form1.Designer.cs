@@ -30,7 +30,12 @@ namespace TreeViewTest
         private void InitializeComponent()
         {
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.label1 = new System.Windows.Forms.Label();
+            this.characterNameDisplay = new System.Windows.Forms.Label();
+            this.characterNameLabel = new System.Windows.Forms.Label();
+            this.speciesDisplay = new System.Windows.Forms.Label();
+            this.weaponLabel = new System.Windows.Forms.Label();
+            this.speciesLabel = new System.Windows.Forms.Label();
+            this.weaponDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // treeView1
@@ -39,24 +44,78 @@ namespace TreeViewTest
             this.treeView1.Name = "treeView1";
             this.treeView1.Size = new System.Drawing.Size(200, 450);
             this.treeView1.TabIndex = 0;
-            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TreeView1_AfterSelect);
             this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView1_NodeMouseDoubleClick);
             // 
-            // label1
+            // characterNameDisplay
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(232, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "[Node Name Display]";
+            this.characterNameDisplay.AutoSize = true;
+            this.characterNameDisplay.Location = new System.Drawing.Point(320, 20);
+            this.characterNameDisplay.Name = "characterNameDisplay";
+            this.characterNameDisplay.Size = new System.Drawing.Size(127, 13);
+            this.characterNameDisplay.TabIndex = 1;
+            this.characterNameDisplay.Text = "[Character Name Display]";
+            // 
+            // characterNameLabel
+            // 
+            this.characterNameLabel.AutoSize = true;
+            this.characterNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.characterNameLabel.Location = new System.Drawing.Point(220, 20);
+            this.characterNameLabel.Name = "characterNameLabel";
+            this.characterNameLabel.Size = new System.Drawing.Size(102, 13);
+            this.characterNameLabel.TabIndex = 2;
+            this.characterNameLabel.Text = "Character Name:";
+            // 
+            // speciesDisplay
+            // 
+            this.speciesDisplay.AutoSize = true;
+            this.speciesDisplay.Location = new System.Drawing.Point(320, 40);
+            this.speciesDisplay.Name = "speciesDisplay";
+            this.speciesDisplay.Size = new System.Drawing.Size(88, 13);
+            this.speciesDisplay.TabIndex = 5;
+            this.speciesDisplay.Text = "[Species Display]";
+            // 
+            // weaponLabel
+            // 
+            this.weaponLabel.AutoSize = true;
+            this.weaponLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weaponLabel.Location = new System.Drawing.Point(264, 60);
+            this.weaponLabel.Name = "weaponLabel";
+            this.weaponLabel.Size = new System.Drawing.Size(58, 13);
+            this.weaponLabel.TabIndex = 4;
+            this.weaponLabel.Text = "Weapon:";
+            // 
+            // speciesLabel
+            // 
+            this.speciesLabel.AutoSize = true;
+            this.speciesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speciesLabel.Location = new System.Drawing.Point(266, 40);
+            this.speciesLabel.Name = "speciesLabel";
+            this.speciesLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.speciesLabel.Size = new System.Drawing.Size(56, 13);
+            this.speciesLabel.TabIndex = 3;
+            this.speciesLabel.Text = "Species:";
+            // 
+            // weaponDisplay
+            // 
+            this.weaponDisplay.AutoSize = true;
+            this.weaponDisplay.Location = new System.Drawing.Point(320, 60);
+            this.weaponDisplay.Name = "weaponDisplay";
+            this.weaponDisplay.Size = new System.Drawing.Size(88, 13);
+            this.weaponDisplay.TabIndex = 6;
+            this.weaponDisplay.Text = "[Species Display]";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.weaponDisplay);
+            this.Controls.Add(this.speciesDisplay);
+            this.Controls.Add(this.weaponLabel);
+            this.Controls.Add(this.speciesLabel);
+            this.Controls.Add(this.characterNameLabel);
+            this.Controls.Add(this.characterNameDisplay);
             this.Controls.Add(this.treeView1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -69,7 +128,12 @@ namespace TreeViewTest
         #endregion
 
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label characterNameDisplay;
+        private System.Windows.Forms.Label characterNameLabel;
+        private System.Windows.Forms.Label speciesDisplay;
+        private System.Windows.Forms.Label weaponLabel;
+        private System.Windows.Forms.Label speciesLabel;
+        private System.Windows.Forms.Label weaponDisplay;
     }
 }
 
